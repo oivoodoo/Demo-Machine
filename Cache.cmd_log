@@ -1,0 +1,11 @@
+xst -ise "C:/MainProject/Machine/Machine.ise" -intstyle ise -ifn "C:/MainProject/Machine/Cache.xst" -ofn "C:/MainProject/Machine/Cache.syr"
+ngdbuild -ise "C:/MainProject/Machine/Machine.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-pq208-5 "Cache.ngc" Cache.ngd
+map -ise "C:/MainProject/Machine/Machine.ise" -intstyle ise -p xc3s200-pq208-5 -cm area -pr off -k 4 -c 100 -o Cache_map.ncd Cache.ngd Cache.pcf
+par -ise "C:/MainProject/Machine/Machine.ise" -w -intstyle ise -ol std -t 1 Cache_map.ncd Cache.ncd Cache.pcf
+trce -ise "C:/MainProject/Machine/Machine.ise" -intstyle ise -e 3 -s 5 -xml Cache Cache.ncd -o Cache.twr Cache.pcf
+xst -ise "C:/MainProject/Machine/Machine.ise" -intstyle ise -ifn "C:/MainProject/Machine/Cache.xst" -ofn "C:/MainProject/Machine/Cache.syr"
+xst -ise "C:/MainProject/Machine/Machine.ise" -intstyle ise -ifn "C:/MainProject/Machine/Cache.xst" -ofn "C:/MainProject/Machine/Cache.syr"
+ngdbuild -ise "C:/MainProject/Machine/Machine.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-pq208-5 "Cache.ngc" Cache.ngd
+map -ise "C:/MainProject/Machine/Machine.ise" -intstyle ise -p xc3s200-pq208-5 -cm area -pr off -k 4 -c 100 -o Cache_map.ncd Cache.ngd Cache.pcf
+par -ise "C:/MainProject/Machine/Machine.ise" -w -intstyle ise -ol std -t 1 Cache_map.ncd Cache.ncd Cache.pcf
+trce -ise "C:/MainProject/Machine/Machine.ise" -intstyle ise -e 3 -s 5 -xml Cache Cache.ncd -o Cache.twr Cache.pcf

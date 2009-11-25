@@ -1,0 +1,650 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\MainProject\Machine
+Ecache
+Z1 w1240329812
+Z2 DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+Z3 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+Z4 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+Z5 dC:\MainProject\Vitalik pack\Machine
+Z6 8Cache.vhd
+Z7 FCache.vhd
+l0
+L6
+V57P<VzmnXg<bJozC8O6XH0
+Z8 OX;C;6.3c;37
+31
+Z9 o-explicit -93 -O0
+Z10 tExplicit 1
+Abehavioral
+R2
+R3
+R4
+DE work cache 57P<VzmnXg<bJozC8O6XH0
+l146
+L17
+V`k8z1H:?dD<[mdLfU46[]3
+R8
+31
+Z11 M3 ieee std_logic_1164
+Z12 M2 ieee std_logic_arith
+Z13 M1 ieee std_logic_unsigned
+R9
+R10
+Ecachetestbench
+Z14 w1241998744
+Z15 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+R3
+R2
+R4
+R5
+Z16 8CacheTestBench.vhd
+Z17 FCacheTestBench.vhd
+l0
+L6
+VS0lU5C9]PN<BGY<EkDGZo2
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+Z18 DE work cachetestbench S0lU5C9]PN<BGY<EkDGZo2
+l26
+L9
+VbzKQK7>BEDU>G_Em7[9jN0
+R8
+31
+Z19 M4 ieee std_logic_1164
+Z20 M3 ieee std_logic_unsigned
+R12
+Z21 M1 ieee numeric_std
+R9
+R10
+Emachinea2
+Z22 w1240742489
+R2
+R3
+R4
+Z23 8MachineA2.vhd
+Z24 FMachineA2.vhd
+l0
+L6
+VcNYXem5HUZ^j_B0LgKc4m3
+R8
+31
+R9
+R10
+Abehavioral
+R2
+R3
+R4
+DE work machinea2 cNYXem5HUZ^j_B0LgKc4m3
+l73
+L17
+Vj8JUYKi5RFPDA8UV<ZG]>1
+R8
+31
+R11
+R12
+R13
+R9
+R10
+Emachinea2testbench
+Z25 w1240746826
+R15
+R3
+R2
+R4
+Z26 8MachineA2TestBench.vhd
+Z27 FMachineA2TestBench.vhd
+l0
+L6
+VLEdH9<CTYK?LoWL;SI6RI2
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work machinea2testbench LEdH9<CTYK?LoWL;SI6RI2
+l34
+L9
+V@`R7jGF:o??_V=`eX<B;?1
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emanager
+Z28 w1241948031
+R15
+R3
+R2
+R4
+R5
+Z29 8Manager.vhd
+Z30 FManager.vhd
+l0
+L59
+VHacIG6]f_XiSUEC1_Co;K1
+R8
+31
+R9
+R10
+Abehavioral
+R15
+R3
+R2
+R4
+DE work manager HacIG6]f_XiSUEC1_Co;K1
+l378
+L79
+ViiC@XBTC3k1Z?z_Y1P2Se2
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emanagermaintest
+Z31 w1241357162
+R15
+R3
+R2
+R4
+R5
+Z32 8ManagerMainTest.vhd
+Z33 FManagerMainTest.vhd
+l0
+L33
+VO^CXRkkV=^e86T2nY>CXA3
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work managermaintest O^CXRkkV=^e86T2nY>CXA3
+l83
+L36
+V7gmYJHXMXh>HWAnT?_:OG0
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emanagertestbench
+Z34 w1241277098
+R15
+R3
+R2
+R4
+Z35 8ManagerTestBench.vhd
+Z36 FManagerTestBench.vhd
+l0
+L6
+V3gf6;9S;HW;]92U>IDYOk3
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work managertestbench 3gf6;9S;HW;]92U>IDYOk3
+l51
+L9
+V?ZgInI^Si<CMo?XH8R:hC0
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emanagertestbench_rom_ram_manager
+Z37 w1241733687
+R15
+R3
+R2
+R4
+R5
+Z38 8ManagerTestBench_ROM_RAM_Manager.vhd
+Z39 FManagerTestBench_ROM_RAM_Manager.vhd
+l0
+L7
+VY`iiD?NN14gK;`c=dj4NY1
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work managertestbench_rom_ram_manager Y`iiD?NN14gK;`c=dj4NY1
+l83
+L10
+V`ci>XW6e4]e=5]eFCzj0=0
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emanagertestbenchadd
+Z40 w1241286806
+R15
+R3
+R2
+R4
+Z41 8ManagerTestBenchADD.vhd
+Z42 FManagerTestBenchADD.vhd
+l0
+L6
+VOoC?64HGPPVd^eASN>NHH2
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work managertestbenchadd OoC?64HGPPVd^eASN>NHH2
+l51
+L9
+VOi1b8ob@ADRm2C?0TTEHd3
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emanagertestbenchcmpjre
+Z43 w1241289752
+R15
+R3
+R2
+R4
+Z44 8ManagerTestBenchCMPJRE.vhd
+Z45 FManagerTestBenchCMPJRE.vhd
+l0
+L6
+VJiADRLYc_Ihg0F8O8cii[0
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work managertestbenchcmpjre JiADRLYc_Ihg0F8O8cii[0
+l53
+L9
+Vhle;gi8HF?`N`R1z=SEG`2
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emanagertestbenchnand
+Z46 w1241286085
+R15
+R3
+R2
+R4
+Z47 8ManagerTestBenchNAND.vhd
+Z48 FManagerTestBenchNAND.vhd
+l0
+L6
+Vi924eB4AD;o5HSZ8TRQzP3
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work managertestbenchnand i924eB4AD;o5HSZ8TRQzP3
+l51
+L9
+VTzO0CRok]e;S?MhQgK<MP1
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emanagertestbenchrom_ram_cache
+Z49 w1241350877
+R15
+R3
+R2
+R4
+Z50 dC:\Temp\Machine
+Z51 8ManagerTestBenchROM_RAM_Cache.vhd
+Z52 FManagerTestBenchROM_RAM_Cache.vhd
+l0
+L33
+V`9nU3DRJEE:kT[83bNP=F1
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work managertestbenchrom_ram_cache `9nU3DRJEE:kT[83bNP=F1
+l83
+L36
+Vn2RBBHdAPS=CTog93b>:;0
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emanagertestbenchstackromram
+Z53 w1241945413
+R15
+R3
+R2
+R4
+R5
+Z54 8ManagerStackRomRam.vhd
+Z55 FManagerStackRomRam.vhd
+l0
+L7
+VVXH9gVNSe6T28i]g15UPC3
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work managertestbenchstackromram VXH9gVNSe6T28i]g15UPC3
+l105
+L10
+VCk1VE[N`<PS5XG>A7la7O3
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emanagertestbenchsub
+Z56 w1241287640
+R15
+R3
+R2
+R4
+Z57 8ManagerTestBenchSUB.vhd
+Z58 FManagerTestBenchSUB.vhd
+l0
+L6
+VoL_=AAXBg6zNeMA:_K?j03
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work managertestbenchsub oL_=AAXBg6zNeMA:_K?j03
+l53
+L9
+Vz22A3@MaBi^EeBHV3Ldad1
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emanagertestbenchsubcmp
+Z59 w1241288839
+R15
+R3
+R2
+R4
+Z60 8ManagerTestBenchSUBCMP.vhd
+Z61 FManagerTestBenchSUBCMP.vhd
+l0
+L6
+VF6[FYQPPO>H[R`J__7aK=0
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work managertestbenchsubcmp F6[FYQPPO>H[R`J__7aK=0
+l53
+L9
+V`zQ`c^2f`OFfNQ;AS0D9Y0
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Emuxdata
+Z62 w1241945466
+R15
+R3
+R2
+R4
+R5
+Z63 8MUXData.vhd
+Z64 FMUXData.vhd
+l0
+L7
+V;J9JJ_H@1ZFInE37Y<eM43
+R8
+31
+R9
+R10
+Abehavioral
+R15
+R3
+R2
+R4
+DE work muxdata ;J9JJ_H@1ZFInE37Y<eM43
+l19
+L17
+V2;<b7iN^Z1WHaRd2ZH_di2
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Erammemory
+Z65 w1241992242
+R15
+R3
+R2
+R4
+R5
+Z66 8RAMMemory.vhd
+Z67 FRAMMemory.vhd
+l0
+L6
+V=a;2HTIY:O]feD6IA^ahM1
+R8
+31
+R9
+R10
+Abehavioral
+R15
+R3
+R2
+R4
+DE work rammemory =a;2HTIY:O]feD6IA^ahM1
+l65
+L18
+V^1HYj@X9;7b9nOFN1K?6f2
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Erommemory
+Z68 w1241992200
+R15
+R3
+R2
+R4
+R5
+Z69 8ROMMemory.vhd
+Z70 FROMMemory.vhd
+l0
+L6
+V[JJ92Uh?N6bn4zz_^:XkD3
+R8
+31
+R9
+R10
+Abehavioral
+R15
+R3
+R2
+R4
+DE work rommemory [JJ92Uh?N6bn4zz_^:XkD3
+l63
+L16
+V`zAL?94]XUCL]8b]n6:_<0
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Estack
+Z71 w1241910289
+R15
+R3
+R2
+R4
+R5
+Z72 8Stack.vhd
+Z73 FStack.vhd
+l0
+L11
+VKYg?go`H7ob0Od3MSA0g`1
+R8
+31
+R9
+R10
+Abehavioral
+R15
+R3
+R2
+R4
+DE work stack KYg?go`H7ob0Od3MSA0g`1
+l33
+L18
+VR`LDM@NmiE8HLTHH70XcG3
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10
+Estacktestbench
+Z74 w1240748085
+R15
+R3
+R2
+R4
+Z75 8StackTestBench.vhd
+Z76 FStackTestBench.vhd
+l0
+L6
+VB]RV<6:T4=DB<MfMK4A1]0
+R8
+31
+R9
+R10
+Abehavior
+R15
+R3
+R2
+R4
+DE work stacktestbench B]RV<6:T4=DB<MfMK4A1]0
+l32
+L9
+V9b@081a<J]0b[cSi=806L2
+R8
+31
+R19
+R20
+R12
+R21
+R9
+R10

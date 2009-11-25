@@ -1,0 +1,1 @@
+xst -ise "C:/MainProject/Machine/Machine.ise" -intstyle ise -ifn "C:/MainProject/Machine/Stack.xst" -ofn "C:/MainProject/Machine/Stack.syr"

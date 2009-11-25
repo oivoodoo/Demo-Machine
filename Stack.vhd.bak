@@ -1,0 +1,47 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+--
+-- command == '0' -> push
+-- command == '1' -> pop
+--
+
+entity Stack is
+    Port ( clk : in  STD_LOGIC;
+           data : in  STD_LOGIC_VECTOR (7 downto 0);
+           command : in  STD_LOGIC;
+           data_out : out  STD_LOGIC_VECTOR (7 downto 0));
+end Stack;
+
+architecture Behavioral of Stack is
+	function ensure_position(last_position : integer) return integer is
+	begin
+		if last_position >= 127 then
+			return 0;
+		elsif last_position < 0 then
+			return 127;
+		end if;
+		return last_position;
+	end;
+
+	type stack_memory_container is array (0 to 127) of std_logic_vector(7 downto 0);
+	signal stack_memory : stack_memory_container;
+	shared variable last_position : integer := 0;
+begin
+	process(clk)
+	begin
+		if rising_edge(clk) then
+			if command = '0' then -- push data
+				last_position := ensure_position(last_position + 1);
+				stack_memory(last_position) <= data;
+			else -- pop
+				data_out <= stack_memory(last_position);
+				last_position := ensure_position(last_position - 1);
+				stack_memory(last_position) <= "UUUUUUUU";
+			end if;
+		end if;
+	end process;
+end Behavioral;
+

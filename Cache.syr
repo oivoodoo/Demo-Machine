@@ -1,0 +1,715 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/MainProject/Machine/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.86 secs
+ 
+--> Parameter xsthdpdir set to C:/MainProject/Machine/xst
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.88 secs
+ 
+--> Reading design: Cache.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Cache.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Cache"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-pq208
+
+---- Source Options
+Top Module Name                    : Cache
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : Cache.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/MainProject/Machine/Cache.vhd" in Library work.
+Entity <cache> compiled.
+Entity <cache> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Cache> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Cache> in library <work> (Architecture <behavioral>).
+Entity <Cache> analyzed. Unit <Cache> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Cache>.
+    Related source file is "C:/MainProject/Machine/Cache.vhd".
+WARNING:Xst:647 - Input <control<39:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <tag_process_var> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <set_process_var> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <is_has_tag<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <current_data> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Using one-hot encoding for signal <max_value_index$mux0002>.
+    Found 8-bit register for signal <data_out>.
+    Found 3-bit adder carry out for signal <add0000$addsub0000> created at line 83.
+    Found 3-bit adder carry out for signal <add0001$addsub0000> created at line 83.
+    Found 3-bit adder carry out for signal <add0002$addsub0000> created at line 83.
+    Found 3-bit adder carry out for signal <add0003$addsub0000> created at line 83.
+    Found 3-bit adder carry out for signal <add0004$addsub0000> created at line 83.
+    Found 3-bit adder carry out for signal <add0005$addsub0000> created at line 83.
+    Found 3-bit adder carry out for signal <add0006$addsub0000> created at line 83.
+    Found 3-bit adder carry out for signal <add0007$addsub0000> created at line 83.
+    Found 128-bit register for signal <cache_count<0>>.
+    Found 128-bit register for signal <cache_count<1>>.
+    Found 11-bit comparator equal for signal <data_out$cmp_eq0000> created at line 53.
+    Found 11-bit comparator equal for signal <data_out$cmp_eq0001> created at line 53.
+    Found 11-bit comparator equal for signal <data_out$cmp_eq0002> created at line 53.
+    Found 11-bit comparator equal for signal <data_out$cmp_eq0003> created at line 53.
+    Found 11-bit comparator equal for signal <is_has_tag$cmp_eq0000> created at line 67.
+    Found 11-bit comparator equal for signal <is_has_tag$cmp_eq0001> created at line 67.
+    Found 11-bit comparator equal for signal <is_has_tag$cmp_eq0002> created at line 67.
+    Found 11-bit comparator equal for signal <is_has_tag$cmp_eq0003> created at line 67.
+    Found 1-bit register for signal <is_initialized<0>>.
+    Found 3-bit comparator less for signal <max_value$cmp_lt0000> created at line 107.
+    Found 32-bit comparator less for signal <max_value$cmp_lt0001> created at line 107.
+    Found 32-bit 4-to-1 multiplexer for signal <max_value$mux0000> created at line 107.
+    Found 32-bit 4-to-1 multiplexer for signal <max_value$mux0001> created at line 107.
+    Found 32-bit comparator less for signal <max_value_index$cmp_lt0000> created at line 107.
+    Found 8-bit comparator not equal for signal <mux0200$cmp_ne0000> created at line 174.
+    Found 8-bit comparator equal for signal <not0000$cmp_eq0000> created at line 174.
+    Summary:
+	inferred 417 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred  13 Comparator(s).
+	inferred  64 Multiplexer(s).
+Unit <Cache> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 3-bit adder carry out                                 : 8
+# Registers                                            : 162
+ 1-bit register                                        : 153
+ 32-bit register                                       : 8
+ 8-bit register                                        : 1
+# Comparators                                          : 13
+ 11-bit comparator equal                               : 8
+ 3-bit comparator less                                 : 1
+ 32-bit comparator less                                : 2
+ 8-bit comparator equal                                : 1
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx\10.1\ISE.
+WARNING:Xst:1426 - The value init of the FF/Latch is_initialized_0 hinder the constant cleaning in the block Cache.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch cache_count<0>_1_31 hinder the constant cleaning in the block Cache.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch cache_count<1>_1_31 hinder the constant cleaning in the block Cache.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch cache_count<0>_2_31 hinder the constant cleaning in the block Cache.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch cache_count<1>_2_31 hinder the constant cleaning in the block Cache.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <cache_count<0>_2_30> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_29> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_28> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_27> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_26> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_25> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_24> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_23> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_22> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_21> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_20> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_19> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_18> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_17> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_16> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_15> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_14> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_13> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_12> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_11> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_10> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_9> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_8> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_7> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_6> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_5> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_4> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_2_3> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_30> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_29> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_28> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_27> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_26> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_25> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_24> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_23> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_22> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_21> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_20> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_19> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_18> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_17> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_16> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_15> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_14> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_13> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_12> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_11> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_10> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_9> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_8> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_7> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_6> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_5> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_4> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<0>_1_3> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_30> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_29> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_28> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_27> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_26> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_25> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_24> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_23> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_22> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_21> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_20> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_19> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_18> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_17> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_16> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_15> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_14> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_13> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_12> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_11> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_10> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_9> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_8> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_7> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_6> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_5> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_4> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_1_3> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_30> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_29> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_28> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_27> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_26> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_25> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_24> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_23> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_22> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_21> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_20> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_19> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_18> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_17> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_16> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_15> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_14> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_13> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_12> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_11> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_10> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_9> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_8> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_7> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_6> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_5> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_4> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cache_count<1>_2_3> has a constant value of 0 in block <Cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <cache_count<1>_0_3> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_4> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_5> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_6> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_7> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_8> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_9> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_10> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_11> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_12> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_13> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_14> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_15> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_16> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_17> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_18> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_19> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_20> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_21> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_22> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_23> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_24> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_25> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_26> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_27> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_28> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_29> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_30> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_0_31> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_3> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_4> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_5> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_6> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_7> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_8> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_9> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_10> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_11> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_12> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_13> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_14> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_15> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_16> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_17> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_18> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_19> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_20> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_21> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_22> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_23> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_24> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_25> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_26> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_27> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_28> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_29> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_30> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<1>_3_31> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_3> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_4> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_5> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_6> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_7> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_8> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_9> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_10> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_11> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_12> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_13> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_14> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_15> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_16> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_17> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_18> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_19> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_20> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_21> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_22> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_23> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_24> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_25> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_26> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_27> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_28> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_29> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_30> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_0_31> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_3> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_4> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_5> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_6> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_7> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_8> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_9> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_10> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_11> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_12> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_13> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_14> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_15> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_16> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_17> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_18> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_19> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_20> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_21> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_22> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_23> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_24> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_25> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_26> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_27> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_28> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_29> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_30> of sequential type is unconnected in block <Cache>.
+WARNING:Xst:2677 - Node <cache_count<0>_3_31> of sequential type is unconnected in block <Cache>.
+INFO:Xst:2261 - The FF/Latch <cache_count<1>_1_31> in Unit <Cache> is equivalent to the following 3 FFs/Latches, which will be removed : <cache_count<1>_2_31> <cache_count<0>_2_31> <cache_count<0>_1_31> 
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 3-bit adder carry out                                 : 8
+# Registers                                            : 186
+ Flip-Flops                                            : 186
+# Comparators                                          : 13
+ 11-bit comparator equal                               : 8
+ 3-bit comparator less                                 : 1
+ 32-bit comparator less                                : 2
+ 8-bit comparator equal                                : 1
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Cache> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Cache, actual ratio is 13.
+FlipFlop is_initialized_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 187
+ Flip-Flops                                            : 187
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Cache.ngr
+Top Level Output File Name         : Cache
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 69
+
+Cell Usage :
+# BELS                             : 505
+#      GND                         : 1
+#      LUT2                        : 13
+#      LUT2_D                      : 2
+#      LUT3                        : 106
+#      LUT3_D                      : 5
+#      LUT3_L                      : 21
+#      LUT4                        : 223
+#      LUT4_D                      : 22
+#      LUT4_L                      : 28
+#      MUXCY                       : 70
+#      MUXF5                       : 13
+#      VCC                         : 1
+# FlipFlops/Latches                : 187
+#      FDE                         : 187
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 30
+#      IBUF                        : 22
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200pq208-5 
+
+ Number of Slices:                      239  out of   1920    12%  
+ Number of Slice Flip Flops:            187  out of   3840     4%  
+ Number of 4 input LUTs:                420  out of   3840    10%  
+ Number of IOs:                          69
+ Number of bonded IOBs:                  31  out of    141    21%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 187   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 20.220ns (Maximum Frequency: 49.457MHz)
+   Minimum input arrival time before clock: 20.870ns
+   Maximum output required time after clock: 6.216ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 20.220ns (frequency: 49.457MHz)
+  Total number of paths / destination ports: 2793693 / 211
+-------------------------------------------------------------------------
+Delay:               20.220ns (Levels of Logic = 37)
+  Source:            cache_count<0>_1_1 (FF)
+  Destination:       data_out_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cache_count<0>_1_1 to data_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.626   1.066  cache_count<0>_1_1 (cache_count<0>_1_1)
+     LUT4:I0->O            2   0.479   0.768  max_value_cmp_lt00001_SW0_SW0 (N161)
+     LUT4:I3->O            1   0.479   0.000  max_value_cmp_lt00001_F (N3411)
+     MUXF5:I0->O           6   0.314   0.912  max_value_cmp_lt00001 (max_value_cmp_lt0000)
+     LUT3:I2->O            2   0.479   0.745  Mmux_max_value_mux00002101 (max_value_mux0000<1>1)
+     MUXCY:DI->O           1   0.774   0.000  Mcompar_max_value_cmp_lt0001_cy<1> (Mcompar_max_value_cmp_lt0001_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_cmp_lt0001_cy<2> (Mcompar_max_value_cmp_lt0001_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_cmp_lt0001_cy<3> (Mcompar_max_value_cmp_lt0001_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_cmp_lt0001_cy<4> (Mcompar_max_value_cmp_lt0001_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_cmp_lt0001_cy<5> (Mcompar_max_value_cmp_lt0001_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_cmp_lt0001_cy<6> (Mcompar_max_value_cmp_lt0001_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_cmp_lt0001_cy<7> (Mcompar_max_value_cmp_lt0001_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_cmp_lt0001_cy<8> (Mcompar_max_value_cmp_lt0001_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_cmp_lt0001_cy<9> (Mcompar_max_value_cmp_lt0001_cy<9>)
+     MUXCY:CI->O          12   0.264   1.009  Mcompar_max_value_cmp_lt0001_cy<10> (Mcompar_max_value_cmp_lt0001_cy<10>)
+     LUT3:I2->O            1   0.479   0.851  Mmux_max_value_mux00001111 (max_value_mux0001<0>)
+     LUT2:I1->O            1   0.479   0.000  Mcompar_max_value_index_cmp_lt0000_lut<0> (Mcompar_max_value_index_cmp_lt0000_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  Mcompar_max_value_index_cmp_lt0000_cy<0> (Mcompar_max_value_index_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_index_cmp_lt0000_cy<1> (Mcompar_max_value_index_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_index_cmp_lt0000_cy<2> (Mcompar_max_value_index_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_index_cmp_lt0000_cy<3> (Mcompar_max_value_index_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_index_cmp_lt0000_cy<4> (Mcompar_max_value_index_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_index_cmp_lt0000_cy<5> (Mcompar_max_value_index_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_index_cmp_lt0000_cy<6> (Mcompar_max_value_index_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_index_cmp_lt0000_cy<7> (Mcompar_max_value_index_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_index_cmp_lt0000_cy<8> (Mcompar_max_value_index_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_max_value_index_cmp_lt0000_cy<9> (Mcompar_max_value_index_cmp_lt0000_cy<9>)
+     MUXCY:CI->O          11   0.264   1.142  Mcompar_max_value_index_cmp_lt0000_cy<10> (Mcompar_max_value_index_cmp_lt0000_cy<10>)
+     LUT4:I1->O           15   0.479   1.033  N5 (N5)
+     LUT4:I3->O            1   0.479   0.000  Mcompar_data_out_cmp_eq0001_lut<1> (Mcompar_data_out_cmp_eq0001_lut<1>)
+     MUXCY:S->O            1   0.435   0.000  Mcompar_data_out_cmp_eq0001_cy<1> (Mcompar_data_out_cmp_eq0001_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_data_out_cmp_eq0001_cy<2> (Mcompar_data_out_cmp_eq0001_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_data_out_cmp_eq0001_cy<3> (Mcompar_data_out_cmp_eq0001_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_data_out_cmp_eq0001_cy<4> (Mcompar_data_out_cmp_eq0001_cy<4>)
+     MUXCY:CI->O          35   0.265   1.649  Mcompar_data_out_cmp_eq0001_cy<5> (Mcompar_data_out_cmp_eq0001_cy<5>)
+     LUT4:I2->O            1   0.479   0.740  data_out_mux0000<18>22 (data_out_mux0000<18>22)
+     LUT4:I2->O            1   0.479   0.851  data_out_mux0000<18>58_SW0 (N135)
+     LUT4:I1->O            1   0.479   0.000  data_out_mux0000<18>72 (data_out_mux0000<18>)
+     FDE:D                     0.176          data_out_7
+    ----------------------------------------
+    Total                     20.220ns (9.454ns logic, 10.766ns route)
+                                       (46.8% logic, 53.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1580382 / 371
+-------------------------------------------------------------------------
+Offset:              20.870ns (Levels of Logic = 26)
+  Source:            address<0> (PAD)
+  Destination:       data_out_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: address<0> to data_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           181   0.715   2.596  address_0_IBUF (address_0_IBUF)
+     LUT3:I0->O            4   0.479   0.802  cache_mux0001<1>1 (cache_mux0001<1>)
+     LUT4:I3->O            1   0.479   0.000  Mcompar_is_has_tag_cmp_eq0003_lut<0> (Mcompar_is_has_tag_cmp_eq0003_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  Mcompar_is_has_tag_cmp_eq0003_cy<0> (Mcompar_is_has_tag_cmp_eq0003_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_is_has_tag_cmp_eq0003_cy<1> (Mcompar_is_has_tag_cmp_eq0003_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_is_has_tag_cmp_eq0003_cy<2> (Mcompar_is_has_tag_cmp_eq0003_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_is_has_tag_cmp_eq0003_cy<3> (Mcompar_is_has_tag_cmp_eq0003_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_is_has_tag_cmp_eq0003_cy<4> (Mcompar_is_has_tag_cmp_eq0003_cy<4>)
+     MUXCY:CI->O          18   0.264   1.227  Mcompar_is_has_tag_cmp_eq0003_cy<5> (Mcompar_is_has_tag_cmp_eq0003_cy<5>)
+     LUT4:I3->O            1   0.479   0.704  result_mux0003<1>27_SW0 (N155)
+     LUT4_L:I3->LO         1   0.479   0.123  result_mux0003<1>27 (result_mux0003<1>27)
+     LUT4:I3->O            1   0.479   0.740  result_mux0003<1>61 (result_mux0003<1>)
+     LUT4_L:I2->LO         1   0.479   0.123  cache_count<1>_0_not000111146 (cache_count<1>_0_not000111146)
+     LUT4:I3->O            3   0.479   0.794  cache_count<1>_0_not000111147 (cache_count<1>_0_not000111147)
+     LUT4:I3->O           17   0.479   1.143  cache_count<1>_0_not000111176 (mux0200_and0001)
+     MUXF5:S->O            1   0.540   0.704  data_out_mux0000<11>11_SW3 (N285)
+     LUT4:I3->O            1   0.479   0.000  Mcompar_data_out_cmp_eq0002_lut<0> (Mcompar_data_out_cmp_eq0002_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  Mcompar_data_out_cmp_eq0002_cy<0> (Mcompar_data_out_cmp_eq0002_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_data_out_cmp_eq0002_cy<1> (Mcompar_data_out_cmp_eq0002_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_data_out_cmp_eq0002_cy<2> (Mcompar_data_out_cmp_eq0002_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_data_out_cmp_eq0002_cy<3> (Mcompar_data_out_cmp_eq0002_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_data_out_cmp_eq0002_cy<4> (Mcompar_data_out_cmp_eq0002_cy<4>)
+     MUXCY:CI->O          26   0.265   1.841  Mcompar_data_out_cmp_eq0002_cy<5> (Mcompar_data_out_cmp_eq0002_cy<5>)
+     LUT4:I0->O            1   0.479   0.000  data_out_mux0000<11>526_G (N412)
+     MUXF5:I1->O           8   0.314   1.216  data_out_mux0000<11>526 (data_out_mux0000<11>526)
+     LUT4:I0->O            1   0.479   0.000  data_out_mux0000<18>72 (data_out_mux0000<18>)
+     FDE:D                     0.176          data_out_7
+    ----------------------------------------
+    Total                     20.870ns (8.857ns logic, 12.013ns route)
+                                       (42.4% logic, 57.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              6.216ns (Levels of Logic = 1)
+  Source:            data_out_7 (FF)
+  Destination:       data_out<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: data_out_7 to data_out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.626   0.681  data_out_7 (data_out_7)
+     OBUF:I->O                 4.909          data_out_7_OBUF (data_out<7>)
+    ----------------------------------------
+    Total                      6.216ns (5.535ns logic, 0.681ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 66.00 secs
+Total CPU time to Xst completion: 65.75 secs
+ 
+--> 
+
+Total memory usage is 171272 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  238 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

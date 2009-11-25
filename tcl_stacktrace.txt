@@ -1,0 +1,50 @@
+Mon Apr 20 14:53:57 GTB Daylight Time 2009
+Trace back: Dataset not found: sim
+    while executing
+"DatasetInfo name sim"
+    ("eval" body line 1)
+    invoked from within
+"eval "DatasetInfo $option $ds""
+    (procedure "dataset info" line 6)
+    invoked from within
+"dataset info name $namespace"
+    (procedure "namespaceOf" line 9)
+    invoked from within
+"namespaceOf $path"
+    (procedure "environment" line 89)
+    invoked from within
+"environment sim:"
+    ("eval" body line 1)
+    invoked from within
+"eval [concat environment $args]"
+    (procedure "env" line 3)
+    invoked from within
+"env $ns"
+    (object "::.main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page3.cs.filepane" method "::Filelist::_buttonRelease1" body line 19)
+    invoked from within
+"::.main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page3.cs.filepane _buttonRelease1 .main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page..."
+    (in namespace inscope "::vsimwidgets::Hierarchy" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page3.cs.filepane _buttonRelease1 .main_pane.work..."
+    (command bound to event)
+  2: ::tkerror {Dataset not found: sim}
+  1: ::bgerror {Dataset not found: sim}
+Fri May 08 21:16:58 GTB Daylight Time 2009
+Trace back: can't set "::DebugDB:::_db_dbg_file": parent namespace doesn't exist
+    while executing
+"set ::DebugDB:::_db_dbg_file """
+    (procedure "HandleDrivers" line 3)
+    invoked from within
+"HandleDrivers $signm drivers"
+    (object "::.main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.editor" method "::vsimwidgets::Srcedit::DriverDoubleClick" body line 9)
+    invoked from within
+"DriverDoubleClick $object $tline $col"
+    (object "::.main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.editor" method "::vsimwidgets::Srcedit::TextDoubleClick" body line 10)
+    invoked from within
+"::.main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.editor TextDoubleClick .main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.editor.cs.paned..."
+    (in namespace inscope "::vsimwidgets::Srcedit" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcedit {::.main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.editor TextDoubleClick} .main_pane.mdi.interior.cs...."
+    (command bound to event)
+  2: ::tkerror {can't set "::DebugDB:::_db_dbg_file": parent namespace doesn't exist}
+  1: ::bgerror {can't set "::DebugDB:::_db_dbg_file": parent namespace doesn't exist}

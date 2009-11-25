@@ -1,0 +1,103 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.all;
+USE ieee.numeric_std.ALL;
+ 
+ENTITY CacheTestBench IS
+END CacheTestBench;
+ 
+ARCHITECTURE behavior OF CacheTestBench IS 
+    COMPONENT Cache
+    PORT(
+         clk : IN  std_logic;
+         address : IN  std_logic_vector(11 downto 0);
+         data : IN  std_logic_vector(7 downto 0);
+         data_out : OUT  std_logic_vector(7 downto 0);
+         control : IN  std_logic_vector(39 downto 0)
+        );
+    END COMPONENT;
+    
+   signal clk : std_logic := '0';
+   signal address : std_logic_vector(11 downto 0) := (others => '0');
+   signal data : std_logic_vector(7 downto 0) := (others => '0');
+   signal control : std_logic_vector(39 downto 0) := (others => '0');
+   signal data_out : std_logic_vector(7 downto 0);
+   constant clk_period : time := 50 ns;
+BEGIN
+ 
+	-- Instantiate the Unit Under Test (UUT)
+   uut: Cache PORT MAP (
+          clk => clk,
+          address => address,
+          data => data,
+          data_out => data_out,
+          control => control
+        );
+
+   -- Clock process definitions
+   clk_process :process
+   begin
+		clk <= '0';
+		wait for clk_period/2;
+		clk <= '1';
+		wait for clk_period/2;
+   end process;
+ 
+
+   -- Stimulus process
+   stim_proc: process
+   begin
+		control <= "0000000000000000000000000000000000000001";
+		
+      -- hold reset state for 100ms.
+		data <= "00000001";
+		address <= "000000000010";
+		
+      wait for clk_period;
+
+		data <= "00000010";
+		address <= "000000000110";
+		
+		wait for clk_period;
+		
+		data <= "00000011";
+		address <= "000000000010";
+		
+		wait for clk_period;
+		
+		data <= "00000100";
+		address <= "000000000110";
+		
+		wait for clk_period;
+		
+		data <= "00000101";
+		address <= "000000001110";
+		
+		wait for clk_period;
+		
+		data <= "00010101";
+		address <= "000000001110";
+		
+		wait for clk_period;
+		
+		data <= "11111111";
+		address <= "000000000010";
+
+		wait for clk_period;
+		
+		control <= "0000000000000000000000000000000000000011";
+		data <= "11111111";
+		address <= "000000000010";
+
+		wait for clk_period;
+		
+		control <= "0000000000000000000000000000000000000001";
+		address <= "000000000010";
+		data <= "00010000";
+		
+      wait for clk_period * 10;
+
+      wait;
+   end process;
+
+END;

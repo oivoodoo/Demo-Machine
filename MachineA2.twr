@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------------
+Release 10.1 Trace  (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
+C:/MainProject/Machine/Machine.ise -intstyle ise -e 3 -s 5 -xml MachineA2
+MachineA2.ncd -o MachineA2.twr MachineA2.pcf
+
+Design file:              MachineA2.ncd
+Physical constraint file: MachineA2.pcf
+Device,package,speed:     xc3s200,pq208,-5 (PRODUCTION 1.39 2008-01-09)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+-------------+------------+------------+------------------+--------+
+             |  Setup to  |  Hold to   |                  | Clock  |
+Source       | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------------+--------+
+address<0>   |    2.328(R)|    0.750(R)|clk_BUFGP         |   0.000|
+address<1>   |    2.428(R)|    0.562(R)|clk_BUFGP         |   0.000|
+address<2>   |    2.658(R)|    0.692(R)|clk_BUFGP         |   0.000|
+jumpSuccessed|    2.528(R)|    1.354(R)|clk_BUFGP         |   0.000|
+-------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+-------------------+------------+------------------+--------+
+                   | clk (edge) |                  | Clock  |
+Destination        |   to PAD   |Internal Clock(s) | Phase  |
+-------------------+------------+------------------+--------+
+astrology_First<0> |    7.550(R)|clk_BUFGP         |   0.000|
+astrology_First<1> |    8.159(R)|clk_BUFGP         |   0.000|
+astrology_Second<0>|    8.156(R)|clk_BUFGP         |   0.000|
+astrology_Second<1>|    7.499(R)|clk_BUFGP         |   0.000|
+-------------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.160|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Sun Apr 26 13:35:58 2009 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 73 MB
+
+
+

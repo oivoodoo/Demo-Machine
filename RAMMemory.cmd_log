@@ -1,0 +1,2 @@
+xst -ise "C:/MainProject/Vitalik pack/Machine/Machine.ise" -intstyle ise -ifn "C:/MainProject/Vitalik pack/Machine/RAMMemory.xst" -ofn "C:/MainProject/Vitalik pack/Machine/RAMMemory.syr"
+xst -ise "C:/MainProject/Vitalik pack/Machine/Machine.ise" -intstyle ise -ifn "C:/MainProject/Vitalik pack/Machine/RAMMemory.xst" -ofn "C:/MainProject/Vitalik pack/Machine/RAMMemory.syr"

@@ -1,0 +1,6 @@
+CommandLine
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\xst.exe -ise C:/MainProject/Vitalik pack/Machine/Machine.ise -intstyle ise -ifn C:/MainProject/Vitalik pack/Machine/RAMMemory.xst -ofn C:/MainProject/Vitalik pack/Machine/RAMMemory.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

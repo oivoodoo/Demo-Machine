@@ -1,0 +1,115 @@
+--------------------------------------------------------------------------------
+Release 10.1 Trace  (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
+C:/MainProject/Machine/Machine.ise -intstyle ise -e 3 -s 5 -xml Manager
+Manager.ncd -o Manager.twr Manager.pcf
+
+Design file:              Manager.ncd
+Physical constraint file: Manager.pcf
+Device,package,speed:     xc3s200,pq208,-5 (PRODUCTION 1.39 2008-01-09)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+address<0>  |    1.251(R)|    0.275(R)|clk_BUFGP         |   0.000|
+address<1>  |    1.196(R)|    0.319(R)|clk_BUFGP         |   0.000|
+address<2>  |    0.781(R)|    0.651(R)|clk_BUFGP         |   0.000|
+address<3>  |    1.059(R)|    0.428(R)|clk_BUFGP         |   0.000|
+address<4>  |    1.527(R)|    0.054(R)|clk_BUFGP         |   0.000|
+address<5>  |    1.312(R)|    0.226(R)|clk_BUFGP         |   0.000|
+address<6>  |    0.816(R)|    0.624(R)|clk_BUFGP         |   0.000|
+address<7>  |    0.808(R)|    0.630(R)|clk_BUFGP         |   0.000|
+address<8>  |    2.073(R)|   -0.382(R)|clk_BUFGP         |   0.000|
+address<9>  |    1.636(R)|   -0.033(R)|clk_BUFGP         |   0.000|
+address<10> |    2.553(R)|   -0.767(R)|clk_BUFGP         |   0.000|
+address<11> |    2.022(R)|   -0.342(R)|clk_BUFGP         |   0.000|
+data<0>     |    7.817(R)|    0.786(R)|clk_BUFGP         |   0.000|
+data<1>     |    8.160(R)|    0.391(R)|clk_BUFGP         |   0.000|
+data<2>     |    7.873(R)|    0.477(R)|clk_BUFGP         |   0.000|
+data<3>     |    7.641(R)|    0.371(R)|clk_BUFGP         |   0.000|
+data<4>     |    7.465(R)|   -0.024(R)|clk_BUFGP         |   0.000|
+data<5>     |    7.363(R)|    0.326(R)|clk_BUFGP         |   0.000|
+data<6>     |    6.926(R)|    0.496(R)|clk_BUFGP         |   0.000|
+data<7>     |    7.367(R)|   -0.660(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+---------------+------------+------------------+--------+
+               | clk (edge) |                  | Clock  |
+Destination    |   to PAD   |Internal Clock(s) | Phase  |
+---------------+------------+------------------+--------+
+address_out<0> |    8.403(R)|clk_BUFGP         |   0.000|
+address_out<1> |    8.333(R)|clk_BUFGP         |   0.000|
+address_out<2> |    8.756(R)|clk_BUFGP         |   0.000|
+address_out<3> |    7.967(R)|clk_BUFGP         |   0.000|
+address_out<4> |    8.602(R)|clk_BUFGP         |   0.000|
+address_out<5> |    7.879(R)|clk_BUFGP         |   0.000|
+address_out<6> |    7.995(R)|clk_BUFGP         |   0.000|
+address_out<7> |    7.592(R)|clk_BUFGP         |   0.000|
+address_out<8> |    8.084(R)|clk_BUFGP         |   0.000|
+address_out<9> |    8.349(R)|clk_BUFGP         |   0.000|
+address_out<10>|    8.742(R)|clk_BUFGP         |   0.000|
+address_out<11>|    8.214(R)|clk_BUFGP         |   0.000|
+data_out<0>    |    7.926(R)|clk_BUFGP         |   0.000|
+data_out<1>    |    8.176(R)|clk_BUFGP         |   0.000|
+data_out<2>    |    7.291(R)|clk_BUFGP         |   0.000|
+data_out<3>    |    7.938(R)|clk_BUFGP         |   0.000|
+data_out<4>    |    7.886(R)|clk_BUFGP         |   0.000|
+data_out<5>    |    7.674(R)|clk_BUFGP         |   0.000|
+data_out<6>    |    7.921(R)|clk_BUFGP         |   0.000|
+data_out<7>    |    7.634(R)|clk_BUFGP         |   0.000|
+registry_out<0>|    7.291(R)|clk_BUFGP         |   0.000|
+registry_out<1>|    7.291(R)|clk_BUFGP         |   0.000|
+registry_out<2>|    7.920(R)|clk_BUFGP         |   0.000|
+registry_out<3>|    7.915(R)|clk_BUFGP         |   0.000|
+registry_out<4>|    7.921(R)|clk_BUFGP         |   0.000|
+registry_out<5>|    8.244(R)|clk_BUFGP         |   0.000|
+registry_out<6>|    8.592(R)|clk_BUFGP         |   0.000|
+registry_out<7>|    8.321(R)|clk_BUFGP         |   0.000|
+---------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    8.484|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Sat May 02 16:03:52 2009 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 75 MB
+
+
+

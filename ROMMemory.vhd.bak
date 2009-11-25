@@ -1,0 +1,77 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity ROMMemory is
+    Port ( 
+			  clk : in  STD_LOGIC;
+           address : in  unsigned(11 downto 0);
+           data : in  unsigned(7 downto 0);
+           data_out : out  unsigned(7 downto 0);
+			  read_enabled : in unsigned
+			 );
+end ROMMemory;
+
+architecture Behavioral of ROMMemory is
+	type memory_container is array (0 to 2047) of unsigned(7 downto 0);
+	shared variable memory : memory_container;
+	signal address_registry : unsigned(11 downto 0);
+	shared variable is_initialized : boolean := false;
+	
+	procedure initialize(memory : out memory_container) is
+	begin
+		memory(0) := "00000000"; -- COMMAND: CMP
+		memory(1) := "00000000"; -- OPER1        | CMP OPER1, OPER2 -> OPER1 - OPER2 => update flags
+		memory(2) := "00000001"; -- OPER2        |
+		memory(3) := "00000001"; -- COMMAND: NAND
+		memory(4) := "00000000"; -- OPER1         | NAND OPER1, OPER3 -> not (OPER1 and OPER3)
+		memory(5) := "00000010"; -- OPER3         |
+		memory(6) := "00000010"; -- COMMAND: ADD
+		memory(7) := "00000001"; -- OPER2         | ADD OPER2, OPER3 -> OPER2 + OPER3
+		memory(8) := "00000010"; -- OPER3         |
+		memory(9) := "00000011"; -- COMMAND: SUB
+		memory(10) := "00000011"; -- OPER3        | SUB OPER3, OPER3 -> OPER3 - OPER3 -> update flags
+		memory(11) := "00000011"; -- OPER3        |
+		memory(12) := "00000000"; -- COMMAND: JRE
+		memory(13) := "00000110"; --              | if flags_zero = '0' => run 6 line to command.
+		memory(14) := "00000000"; 
+		memory(15) := "00000000";
+		memory(16) := "00000000";
+		memory(17) := "00000000";
+		memory(18) := "00000000";
+		memory(19) := "00000000";
+		memory(20) := "00000000";
+		memory(21) := "00000000";
+		memory(22) := "00000000";
+		memory(23) := "00000000";
+		memory(24) := "00000000";
+		memory(25) := "00000000";
+		memory(26) := "00000000";
+		memory(27) := "00000000";
+		memory(28) := "00000000";
+		memory(29) := "00000000";
+		memory(30) := "00000000";
+		memory(31) := "00000000";
+		memory(32) := "00000000";
+		memory(33) := "00000000";
+		memory(34) := "00000000";
+		memory(35) := "00000000";
+		memory(36) := "00000000";
+		memory(37) := "00000000";
+	end;
+begin
+	process
+	begin
+		if rising_edge(clk) then
+			if is_initialized = false then
+				initialize(memory);
+				is_initialized := true;
+			end if;
+			address_registry <= address;
+			if read_enabled = '1' then
+				data_out <= memory(to_integer(address));
+			end if;
+		end if;
+	end process;
+end Behavioral;

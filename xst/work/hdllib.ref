@@ -1,0 +1,9 @@
+AR rammemory behavioral "C:/MainProject/Vitalik pack/Machine/RAMMemory.vhd" sub00/vhpl08 1241976103
+EN stack NULL C:/MainProject/Machine/Stack.vhd sub00/vhpl04 1240747546
+EN cache NULL C:/MainProject/Machine/Cache.vhd sub00/vhpl00 1240258357
+AR machinea2 behavioral C:/MainProject/Machine/MachineA2.vhd sub00/vhpl03 1240740727
+EN manager NULL "C:/MainProject/Vitalik pack/Machine/Manager.vhd" sub00/vhpl05 1241975839
+AR manager behavioral "C:/MainProject/Vitalik pack/Machine/Manager.vhd" sub00/vhpl06 1241975840
+EN rammemory NULL "C:/MainProject/Vitalik pack/Machine/RAMMemory.vhd" sub00/vhpl07 1241976102
+AR cache behavioral C:/MainProject/Machine/Cache.vhd sub00/vhpl01 1240258358
+EN machinea2 NULL C:/MainProject/Machine/MachineA2.vhd sub00/vhpl02 1240740726
